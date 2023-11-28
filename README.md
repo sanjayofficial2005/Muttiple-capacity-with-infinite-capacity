@@ -22,7 +22,12 @@ Queuing are the most frequently encountered problems in everyday life. For examp
 
 
 
-## Program
+## Program:
+### multiple capacity with infinity capacity:
+```python
+DEVELOPED BY: SANJAY.M
+REF NO      :23013084
+
 import math
 arr_time=float(input("Enter the mean inter arrival time of objects from Feeder (in secs): "))
 ser_time=float(input("Enter the mean  inter service time of Lathe Machine (in secs) :  "))
@@ -36,12 +41,12 @@ print("--------------------------------------------------------------")
 print("The mean arrival rate per second : %0.2f "%lam)
 print("The mean service rate per second : %0.2f "%mu)
 rho=lam/(c*mu)
-sum=(lam/mu)*c(1/(1-rho))/math.factorial(c)
+sum=(lam/mu)**c*(1/(1-rho))/math.factorial(c)
 for i in range(0,c):
     sum=sum+(lam/mu)**i/math.factorial(i)
 P0=1/sum
 if (rho<1):
-    Lq=(P0/math.factorial(c))(1/c)(lam/mu)*(c+1)/(1-rho)*2
+    Lq=(P0/math.factorial(c))*(1/c)*(lam/mu)**(c+1)/(1-rho)**2
     Ls=Lq+lam/mu
     Ws=Ls/lam
     Wq=Lq/lam
@@ -54,11 +59,15 @@ if (rho<1):
 else:
     print("Warning! Objects Over flow will happen in the conveyor")
 print("--------------------------------------------------------------")
+```
 
 
 ## Output :
+![ex 05 output pqm](https://github.com/sanjayofficial2005/Muttiple-capacity-with-infinite-capacity/assets/148048602/0367fb37-02b5-4114-b633-94b9060e4baa)
+
 
 
 
 ## Result : 
+This program executed succesfully.
 
